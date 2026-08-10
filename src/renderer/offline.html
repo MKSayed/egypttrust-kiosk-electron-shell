@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>You're offline</title>
+  <style>
+    :root { color-scheme: dark; }
+    html, body {
+      margin: 0; height: 100%;
+      background: #14161a;
+      color: #e7e9ec;
+      font-family: -apple-system, "Segoe UI", Inter, system-ui, sans-serif;
+    }
+    body {
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 10px; text-align: center; padding: 24px;
+    }
+    h1 { font-size: 16px; font-weight: 600; margin: 0; }
+    p { margin: 0; font-size: 13px; color: #8b9099; max-width: 320px; line-height: 1.5; }
+    button {
+      margin-top: 14px;
+      background: #2b2f36; color: #e7e9ec; border: 1px solid #3a3f47;
+      border-radius: 8px; padding: 8px 16px; font-size: 13px; cursor: pointer;
+    }
+    button:hover { background: #34383f; }
+  </style>
+</head>
+<body>
+  <h1>Can't reach the app</h1>
+  <p>Check your internet connection. This will retry automatically, or you can try again now.</p>
+  <button onclick="location.reload()">Retry</button>
+</body>
+</html>

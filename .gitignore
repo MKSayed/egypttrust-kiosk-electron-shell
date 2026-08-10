@@ -1,0 +1,9 @@
+node_modules/
+out/
+release/
+.env
+.DS_Store
+
+# local-mode content is dropped in at build time, not committed
+resources/web-app/*
+!resources/web-app/README.md

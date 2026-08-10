@@ -1,0 +1,47 @@
+appId: com.yourcompany.yourapp
+productName: Your App
+copyright: Copyright © ${author}
+
+directories:
+  output: release
+  buildResources: build
+
+# out/ is electron-vite's build output (main, preload, renderer).
+# resources/web-app is only meaningful in local mode; harmless to include
+# even if empty when you're running purely in remote mode.
+files:
+  - out/**/*
+  - package.json
+
+extraResources:
+  - from: resources/web-app
+    to: web-app
+    filter:
+      - '**/*'
+      - '!README.md'
+
+
+# --- Windows ---
+win:
+  target: [nsis]
+  # signtoolOptions / azureSignOptions go here when wiring up cloud HSM signing
+  # (Azure Trusted Signing, SSL.com, DigiCert KeyLocker) — a plain .pfx no
+  # longer satisfies the EV/hardware-backed-key requirement for SmartScreen trust.
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+
+# --- Linux ---
+linux:
+  target: [AppImage]
+  category: Office
+
+# --- Auto-update feed ---
+# electron-updater reads this at runtime to know where to check for
+# latest.yml / latest-mac.yml / latest-linux.yml. Swap the provider without
+# touching any application code — see src/main/updater.ts.
+publish:
+  provider: generic
+  url: https://updates.example.com/your-app/
+  channel: latest
