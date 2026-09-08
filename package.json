@@ -1,9 +1,9 @@
 {
-  "name": "electron-shell",
+  "name": "egypttrust-kiosk",
   "version": "1.0.0",
-  "description": "Electron shell that loads a hosted React app (remote URL) or a locally bundled build (local mode).",
+  "description": "Egypt Trust Kiosk App",
   "main": "./out/main/index.js",
-  "author": "Your Name",
+  "author": "MKSayed",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
@@ -19,7 +19,10 @@
     "dist:publish": "npm run build && electron-builder --publish always"
   },
   "dependencies": {
-    "electron-updater": "^6.8.9"
+    "dotenv": "^17.4.2",
+    "electron-updater": "^6.8.9",
+    "handlebars": "^4.7.9",
+    "tree-kill": "^1.2.2"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

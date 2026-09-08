@@ -39,6 +39,33 @@ declare global {
     options?: ElectronPrintOptions;
   }
 
+  interface ElectronSettings {
+    id_card_rotation_angle: string;
+    invert_face_cam: boolean;
+    receipt_printer_name: string | undefined
+  }
+
+  interface ReceiptData {
+    paymentInformation: {
+      data: {
+        requestId: string;
+        paymentReference: string;
+      };
+    };
+    posPayment: {
+      transactionAmount: number;
+      cardNumber?: string | null;
+      terminalId?: string | null;
+      merchantId?: string | null;
+      ecrRefNo?: string | null;
+      trxDatetime?: string | null;
+      trxRrn?: string | null;
+      rspCode?: string | null;
+      authCode?: string | null;
+      batch?: string | null;
+    };
+  }
+
   interface UpdateStatus {
     status:
       | "checking"
@@ -56,10 +83,16 @@ declare global {
     isElectron: true;
     platform: "win32" | "darwin" | "linux";
     appVersion: string;
+    settings: ElectronSettings;
 
     print: (options?: ElectronPrintOptions) => Promise<PrintResult>;
 
     printPdfString: (request: PrintPdfRequest) => Promise<PrintResult>;
+
+    print_receipt: (
+      receiptData: ReceiptData,
+      options?: ElectronPrintOptions,
+    ) => Promise<PrintResult>;
 
     getPrinters: () => Promise<PrinterInfo[]>;
 
@@ -70,6 +103,6 @@ declare global {
 
   interface Window {
     /** Undefined in a plain browser tab — always guard with `window.electronAPI?.` */
-    electron?: ElectronAPI;
+    electronAPI?: ElectronAPI;
   }
 }

@@ -14,7 +14,11 @@ export const IpcChannels = {
   // print domain
   PRINT_CURRENT_WINDOW: 'print:current-window',
   PRINT_B64_PDF: 'print:b64-pdf',
+  PRINT_RECEIPT: 'print:receipt',
   PRINT_GET_PRINTERS: 'print:get-printers',
+
+  // config domain
+  CONFIG_GET_SETTINGS: 'config:get-settings',
 
   // app-info domain
   APP_GET_VERSION: 'app:get-version',

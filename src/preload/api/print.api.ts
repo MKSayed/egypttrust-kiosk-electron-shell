@@ -19,5 +19,11 @@ export const printApi = {
       options,
     }),
 
+  print_receipt: (
+    receiptData: ReceiptData,
+    options?: ElectronPrintOptions,
+  ): Promise<PrintResult> =>
+    ipcRenderer.invoke(IpcChannels.PRINT_RECEIPT, receiptData, options),
+
   getPrinters: (): Promise<PrinterInfo[]> => ipcRenderer.invoke(IpcChannels.PRINT_GET_PRINTERS),
 };

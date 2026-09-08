@@ -1,5 +1,5 @@
-appId: com.yourcompany.yourapp
-productName: Your App
+appId: com.egypttrust
+productName: Egypt Trust Kiosk
 copyright: Copyright © ${author}
 
 directories:
@@ -19,7 +19,17 @@ extraResources:
     filter:
       - '**/*'
       - '!README.md'
+      
+  - from: resources/resources
+    to: ./
+    filter:
+      - '**/*'
 
+  # Places worker.exe and its .env file into the main Electron folder
+  - from: resources/cwd-resources
+    to: ../
+    filter:
+      - '**/*'
 
 # --- Windows ---
 win:
@@ -27,6 +37,8 @@ win:
   # signtoolOptions / azureSignOptions go here when wiring up cloud HSM signing
   # (Azure Trusted Signing, SSL.com, DigiCert KeyLocker) — a plain .pfx no
   # longer satisfies the EV/hardware-backed-key requirement for SmartScreen trust.
+
+  icon: 'app-egypttrust-logo.ico'
 
 nsis:
   oneClick: false

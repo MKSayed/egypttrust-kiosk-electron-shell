@@ -1,4 +1,5 @@
 import { registerAppInfoHandler } from './app-info.handler';
+import { registerConfigHandler } from './config';
 import { registerPrintHandler } from './print.handler';
 import { registerUpdateHandler } from './update.handler';
 
@@ -9,6 +10,7 @@ import { registerUpdateHandler } from './update.handler';
  *   3. Call it here, and expose it from src/preload/api/<feature>.api.ts
  */
 export function registerAllIpcHandlers(): void {
+  registerConfigHandler();
   registerPrintHandler();
   registerAppInfoHandler();
   registerUpdateHandler();

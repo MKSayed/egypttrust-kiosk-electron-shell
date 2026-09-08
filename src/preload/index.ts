@@ -1,5 +1,6 @@
 import { contextBridge } from 'electron';
 import { resolveAppInfo } from './api/app-info.api';
+import { resolveSettings } from './api/config.api';
 import { printApi } from './api/print.api';
 import { updateApi } from './api/update.api';
 
@@ -9,17 +10,21 @@ import { updateApi } from './api/update.api';
 // src/shared/electron-api.d.ts. If a field exists on `window.electronAPI`
 // in the React app but isn't assembled here, that's a bug in this file.
 async function exposeElectronApi(): Promise<void> {
-  const { appVersion, platform } = await resolveAppInfo();
+  const [{ appVersion, platform }, settings] = await Promise.all([
+    resolveAppInfo(),
+    resolveSettings(),
+  ]);
 
   const electronAPI: ElectronAPI = {
     isElectron: true,
     appVersion,
     platform,
+    settings,
     ...printApi,
     ...updateApi,
   };
 
-  contextBridge.exposeInMainWorld('electron', electronAPI);
+  contextBridge.exposeInMainWorld('electronAPI', electronAPI);
 }
 
 void exposeElectronApi();

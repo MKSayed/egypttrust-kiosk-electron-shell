@@ -1,15 +1,19 @@
-import { join } from 'node:path';
-import { BrowserWindow, shell } from 'electron';
+import { dirname, join } from 'node:path';
+import { pathToFileURL } from 'node:url';
+import { BrowserWindow, net, protocol, shell } from 'electron';
 import { loadConfig } from './config';
 
 const isDev = !!process.env.ELECTRON_RENDERER_URL; // set by electron-vite in dev mode
+
+protocol.registerSchemesAsPrivileged([
+  { scheme: 'app', privileges: { standard: true, secure: true, supportFetchAPI: true } },
+]);
 
 export function createMainWindow(): BrowserWindow {
   const config = loadConfig();
 
   const win = new BrowserWindow({
-    width: 1280,
-    height: 800,
+    fullscreen: true,
     show: false,
     autoHideMenuBar: true,
     webPreferences: {
@@ -17,7 +21,7 @@ export function createMainWindow(): BrowserWindow {
       contextIsolation: true,
       sandbox: true,
       nodeIntegration: false,
-      webSecurity: true,
+      webSecurity: false,
     },
   });
 
@@ -55,7 +59,14 @@ async function loadApp(
     : join(__dirname, '../renderer/offline.html');
 
   if (config.loadMode === 'local') {
-    await win.loadFile(config.localEntryPath);
+    const appRoot = dirname(config.localEntryPath);
+
+    protocol.handle('app', (request) => {
+      const filePath = join(appRoot, decodeURIComponent(new URL(request.url).pathname));
+      return net.fetch(pathToFileURL(filePath).toString());
+    });
+
+    await win.loadURL('app://local/index.html');
     return;
   }
 

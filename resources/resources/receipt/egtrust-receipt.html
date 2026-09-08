@@ -1,0 +1,491 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset CSS */
+      ::before,
+      ::after {
+        --tw-content: "";
+      }
+
+      html,
+      :host {
+        line-height: 1.5;
+        tab-size: 4;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      body {
+        margin: 0;
+        line-height: inherit;
+      }
+
+      * {
+        box-sizing: border-box;
+        text-underline-offset: 0.134em;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-size: inherit;
+        font-weight: inherit;
+      }
+
+      blockquote,
+      dl,
+      dd,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      hr,
+      figure,
+      p,
+      pre {
+        margin: 0;
+      }
+
+      img,
+      svg,
+      video,
+      canvas,
+      audio,
+      iframe,
+      embed,
+      object {
+        display: block;
+        vertical-align: middle;
+      }
+
+      img,
+      video {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Global CSS */
+      :root {
+        --margin-sm: 16px;
+        --margin-md: 32px;
+      }
+
+      html {
+        height: 100%;
+        font-size: 16px;
+      }
+
+      .text2 {
+        line-height: 1.333;
+      }
+
+      .text1 {
+        font-size: 12px;
+        font-family: "Georama";
+        font-weight: 700;
+        line-height: 1.067;
+        letter-spacing: 0px;
+      }
+
+      /* Page wrapper for centering */
+      html {
+        width: 56mm;
+        max-width: 56mm;
+        display: flex;
+        justify-content: center;
+        background-color: #f5f5f5;
+      }
+
+      body {
+        width: 56mm;
+        max-width: 56mm;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 23px;
+        color: #000;
+        font-size: 10.5px;
+        font-family: "Georama";
+        line-height: 1.067;
+        letter-spacing: 0px;
+        background-color: #fff;
+        padding: 0;
+        overflow: auto;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        width: 160px;
+        height: 70px;
+        flex-shrink: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .line {
+        margin-top: 1px;
+        width: 100%;
+        height: 0;
+        flex-shrink: 0;
+        border-top: 1px solid #000;
+      }
+
+      /* row-a */
+      .row-a {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-align: left;
+      }
+
+      .row-text-a {
+      }
+
+      /* row-b */
+      .row-b {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 1px;
+      }
+
+      .row-text-b {
+      }
+
+      .subtitle-welcome-to {
+        margin: 2px 0 0 0;
+        align-self: stretch;
+        font-size: 20px;
+        line-height: 1.1;
+        text-align: center;
+      }
+
+      .col1 {
+        margin: 2px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        align-self: stretch;
+        text-align: left;
+      }
+
+      .row-top {
+        text-align: unset;
+      }
+
+      .line2 {
+        margin-top: 0;
+      }
+
+      .col2 {
+        margin: 2px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-self: stretch;
+        text-align: left;
+      }
+
+      .row1 {
+        text-align: unset;
+      }
+
+      .row2 {
+        margin-top: 1px;
+      }
+
+      .row5 {
+        text-align: unset;
+      }
+
+      .row6 {
+        margin-top: 1px;
+        text-align: unset;
+      }
+
+      .row7 {
+        margin-top: 1px;
+      }
+
+      .row8 {
+        text-align: unset;
+      }
+
+      .col-bottom {
+        margin: 2px 0 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        align-self: stretch;
+      }
+
+      .row10 {
+        margin-top: 1px;
+      }
+
+      .row11 {
+        margin-top: 1px;
+      }
+
+      .row12 {
+        margin-top: 1px;
+      }
+
+      .row13 {
+        margin-top: 1px;
+      }
+
+      .text-approved-online {
+        margin-top: 1px;
+        text-align: center;
+      }
+
+      .text-507803xxxxxxxxxx {
+        margin-top: 1px;
+        text-align: center;
+      }
+
+      .row14 {
+        margin-top: 1px;
+      }
+
+      .row15 {
+        margin-top: 1px;
+      }
+
+      .text-sst-gig-hq {
+        margin-top: 1px;
+        text-align: center;
+      }
+
+      .row16 {
+        margin-top: 1px;
+        text-align: left;
+      }
+
+      .text-entered-online {
+        margin-top: 1px;
+        text-align: left;
+      }
+
+      .text-i-authorize {
+        margin-top: 1px;
+        text-align: left;
+      }
+
+      .text-merchant {
+        margin-top: 1px;
+        text-align: center;
+      }
+
+      .text-symbol {
+        margin-top: 1px;
+        text-align: center;
+      }
+
+      .text-please-keep {
+        margin-top: 1px;
+        text-align: center;
+      }
+
+      .text-thank-you {
+        margin-top: 1px;
+        text-align: center;
+      }
+
+      .graphic-bottom {
+        margin-top: 1px;
+        width: 100%;
+        height: auto;
+        justify-content: space-between;
+        flex-shrink: 0;
+      }
+
+      /* Print styles for 80mm width */
+      @media print {
+        html {
+          background-color: #fff;
+          width: 56mm;
+          display: block;
+        }
+
+        body {
+          width: 56mm;
+          max-width: 56mm;
+          margin: 0;
+          box-shadow: none;
+          padding: 0 4mm;
+          align-items: flex-start;
+        }
+
+        @page {
+          size: 56mm 250mm;
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      width="200"
+      height="70"
+    >
+      <title>Egypt Trust E-Signature &amp; E-Seal</title>  
+      <image
+        width="200"
+        height="86"
+        filter="url(#bw)"
+        xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATgAAABWCAYAAABb9or0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAOdEVYdFNvZnR3YXJlAEZpZ21hnrGWYwAAIL5JREFUeAHtXd1uG9e1XmsPLdHuAaw+gSmgsd3cWD4XTU57YeoJTClJkRSnEQUUbeycA8lPIOoJJKOwlQQFJLVAk540FvUEpi5Om5wbUzeF7Rjw+AlKA41FSZy9zlp7ZqjhiP8aSpS0P8AWOZz/2fPt9b8QTikyudWxtKrOE8It0DAW+alCiirgOcU9GNl0i7MVsLCwOJdQcMpwPbeSuTb9cGMUqxsa6eWul556tnHnJpPaIhLI50mtYRmd2pisc336QQEsLCzOJRBOEa6/v5LVHixpoPkU4jgB3UaN91BRTgMu8feK0ihklyPAG0rDogY1A6hzisnvafGOCxYWFucGp0aCY8ktL+SWIj3rKCwQwCpoVZLfhNzkLwKOscq6+uzR3WWW5jKk4KVSNZRtNMKGSH9gYWFxbnAqJDghJiaux7uUvilqJ591FghcVkfHr02vPOFVJhq3oHss2ZWZ4B6brxrnEWibSW7pOauzYGFhcS5wKiQ4ISpNeioN1TGxsSHoWSK6d316JQ+HyI3XB1ioQroMiPMeUfZZ8ZP7kOIfUBWvTq8sgIWFxbnA0EtwQmIa4BYSvWbCmuMzLpFH958X7xbFk5rC/RuO2p8gUr4nFcnl37e/L35aDrZndZbm+Icx1LVJjamlPUpPWu+qhcXZx9BLcKyazrCzYN2Qm1kAWVLq1lsffDEx6lQ3FHpZtre9ZlvblgL9ShFvoZwZltRW/dV9cvP3lVoQKW7U2Z0BCwuLM48UDDEmWELb0VWh4Ux0OZEuKo9u88csi6BZEp7WB1ytRElljE//gaW3/SKvkzcL2HZHDt4DzxM19T5YWFicaQy1BFdNVSc0Ypn/3Y4ur9HFbRRHQwdcwL0s8vbRZaq2d4VFuQxYWFiceQy1BAdaZxQ6Ln9yWSar28zEfsYqaEk+tt3eg9cealchroWLlNjyTl14s4WFRT8YboIDsaHpivJwi9XMzehyY5frgCpcrIi2mqbq4sGyf6uMYtU6GCwszgGGnuBEndQO5tiLmossRVKwAU1CRKIYxd15JO812+hW68vohxyQMwYWFhZnHsOtrPmZChkmuQY7GjsPrjDHlTpt7mld1qCuNOyS8BV7KcDCwuLsY6gJTnJHkSCrtN6KLh/BWg7B2/a/kaihZf5XCv4ZMpS81Bcbd7canBEErpNSYxr9FC8LC4uzjeG3waFaQ9rjD6kSBGSlPcj8CC4tvlbe45ePfvOq2XZv5R5MmDATqmbq+yIqkMYZ3oENEbGwOAcYeoK7pEfu76DeYEluURRLD6jwonhny68Htz/O3tQiAmXCYF4j0SGWn31zZ1LWcR/dGb8+/SBPpGYU4JYGyoVZDhYWFmcbQx8wUZaUKqRNKY0keagpxMlr0w//OaKqS+lautxIbgIcYxObK59GVfXJtfdWHmuNlV1KT0lOq9J4DywsLM4FTk09OClyyX+2SDuXUemCLEMN41L7DYJyST6oghpvMnXnJene2N1IT3kKF8RpYRLvLSwszgVOTcjrRX1xlv/ckvpu2nGk5JEb1n4zzoUQWhXkj5Ab/1sTcquhWrXkZmFx/oCrf/8w4yAsaGjM9xww3G5XZA/q9sc//5/l8PvV3OcLiFpsagWN6KbIM04GITtWTUvPi3cWr+Ye5tjeVhYpThPclgrA4lGV9Vaf5MZwN7106EDIkh/g8AUAk6po0q9jS93Z//iqBBYWFm1RV1H/+H8fSfOWebZ15WDIwCS1yC90IfwuBTC1ggVTtRfBlXxTCeg164K6YkJDiCrsMS3vQfp+WBpJyE3tjT5mNpyAUw2an3n3L1YatbDogEM2OJHomCAWpEoHHK9U1xYsXS17ozuLszeLDVLWT6a+ELVVgoH5vHWFWArbp5FSPHxk9X9/NaEcLXa8DJxyoMLsxz/7cgssLCzaoq2Tgckur5jsYHhIwQXEwsw7X3bMQw1hpLZqeh786zgT0KPVH8eJ3sLC4jC68qKK+qo15et11U4e7GCgIqugm5CuluMvu0ih/CfrIN5mu1yW7WtnKPcUyzPvfmn7SlhYdIGewkSGVX1l9VRi5SrB57GzRWiNEM9w/t2vZsHCwqIj+o6DG0L19XwAMd+Lim5hcZ5x5EDfIVRfzzTYozzOHmUXLCwsOiKxTAajviqcC+q2ZcBiALD2NwuLXjCQVC1RXwOyO+XxZsMFdqws59/5i82ltbDoEgPNRbXqa7LQnndz9hdf20ooFhZd4liS7SUW7QJdugznDN6+zrPbswDJwJ1596txsLCw6BrHUg8uiFM7d4Gp699+mIekgFjoZfVr7302R9RbuIzSsPW0eKfUbp3r769kPY23EXUGgzJVmrCMGssKtGzvxrd5O/dgoqZUQ+tH0nqzU12+69MreQ3QUHL++aM7poGQ5BuDwhvttkfECuL+9tO//nep2/33gm7ul0Ds00rBkZqNz7zzlbluk5GT0rfbriz5y1h7BSN7pVYB4XxOWT6nWwdL0G3nnT90DUSVdumCsn9UdFsRZHQwThRQhVAVWavbauYoO3xOveLwNQx/05lTCnlYkKCzRQZFTxsQzWOPx9fKSJulZr8JsRHBAmnImsbadCD88/cs8EiWgqTXpx8sPn30aSG67Qhccj2o5iFyPogqy38moQUk35j3txpVMSQG8OCgTLKdTB98wkQpuDa14kpxhufF3zUMfr6EGSmJD32i3f2KIZOAJO93hlN6ovO+ND8OBbCbhj9+++Ga5+dyu9E1DJFE9sN3qsR/2oUfxa4BXWjSPD1IiZRiFlm5wTImsH4MlGeSU2jej4b88mbn1CuaXcOJEdz193+fhQHCq6nKSVbudfjlSaq1jbzYJxkawpJOgYmtq1Q3ArVwdWpFZu6pUJqToqUscd1jx9NGfUWE7PXc77NPi82lK1NMoXHHLu9zEfoBguQprzH5jsfJ96yDx47Eq2aZUCYHPYZWv/tlTpHe6GZdiaFl8r3y8YCD1o+d4EwlEIQNfmEG52ElKDmsGcMJQcR5StCxQv2+2Angp9MP5zW0IjfJHsFDajAiTIj0BREJ7XnxbpElqXpfDbM1pmS/pfj2gfSWbzwULj8tfuJCS5hziapjmUNrCPnmHpblXOBswY18zjT5XTKQGp5H0jAqLMFSk59cODi/bPQHecarf/vl9mykHFrSOFaCM2qOpg1s8lIkBo3zJ13YUurrDZv0Rkj559/c7SkDwkxGQDFyM2WolqNlqKSiiwNeIUpe8vkak6MpSBoukr4asXXElhYnnGbSW6dnyupPke1z9UnN79nxJkem2vPBeGO73Bz/MceTvh3N9nV1emU1qv7yMyiEtr9+ENTua1a5J8uSzOPoMnYk9er4O+R88u10tAqRMC1Jr5TjDaqOoEKxsepMdFm86o1fexKXoiXZlFLyPMwYCeyMh+7z+ncfLjSq092nKx5bRd9AzXkMgyI3KU2u9c2TJrezJL0J0cSfl6NpUoqKhuQmeLHx2y3pl9FQWVlAjYZ1Mcg32NHAEE7DrC+kGretSTc06BFyfqyOrhE4jdIBk6rfV/fsYvYXfy7rkdFJk6MdgUK6AQODbqgjKc85XtJLJmpvdDROTBmJsoAB4VgI7trUw2WCQZYrouIupW/+Ywi6ZTkJlmU6adsbxoqf8gRVaHeP0Sdjt/4PcSxOJux5XPTVyfpBMiLp1Y/hGFUqclCp0tyb5BmFdGWLL3NoLwNnHLM31yr8drvRZSw9Z+CYwI6npqQl5yWSXfTfIEt/DVxFvT71cI0Qj+Qibwd56fgFODEpJwrJ4EhQenNPUnrzzQnQMEhVey8bBCET4x3Wca9Of76M4DcOEsjkxyrlWjpVnRAvbXR9Js0j2VLFwXFtegXOJYiOLTSLTFVt9qaH3wFzbF+bb2ZfO85irQMluMGSm9iCYHZYDMamsOZuglIqYmH23S9dSAqEWfYitrbvaOVGY7qIJMYsYkkkKj8t3nUhAZhet2pnPlR/xSY7oqpz/Dzz0fVEgn3WJK6uF7z1wRcT4Hlw3hDWRIwuQ+q+F0qvYNv6Jjsy5qPL2L62tP7th3OsCZRN/Futtn3cmTgDI7iBkptpBUhTw6CShlC7FwtgerQeHcaImnBJJLFrsRcx32aFEkQ8mhIk3MiGzRvyvPXBgwmHdGsbSi3lxoN/Rapisr3Hs/zqweHj8U9UURqPJMGKowFr1dWoeZ8N3JWwAdFZQUBmUWRVE1OJJtyEAUGcF3/67sOCPhzHxjZpzJj4N8eR4HeXH0epWWzeIDAQgjMOBYCBkRvPRJNMbi4MCVb/9hHPXDQHyeBEVdNeoTy1wcSZafU7OZSHJl3UxAFwbWplpsHzGt2OPbU9SW8EE+z9XDj4imMKdvKHnVp41kJEMkxmLzutdBz23F+zF5TJ9lWHOpHGCcc2OlFhFwcZIiJInOACchuMQyEgt6dHVFuShHHJK70ECUF7aoq9YC6cAxwKGwnBz1k8tdADJPaO/0TCIqIx9Af73aP0uavGwneiRKPVY7luJtE1/rNmCm2QeFZVtmlVIXZAKfagM8nBqYmDu5r7PEegzw+5SXAjdhe53RUQ8+LihwFAI87XKNVaeolxgQL9iqJO9lYeOLHrNAatjXUbCiQ2v3jwr9lDH2EhHcHeWHFYRMNbzgdoPn8CLSYDR4Lfi1jek5S6QZ7OxUOAmOQW2H69NihPamIEZ6LPE5RkGjCskhsm2IYQoTDIUuTstazEWym2g+dcKKtG43ymWWqViX+L4Np7K48hkt+pdXvDNim6j+wAqX9nG1l/YSGHMhlkZxUm9hKRLp41u1sd7ClFR9XDeciDYkNPEhxgUH2XCFRj+bf5p799tKkVRVL2+PyqaZHwSjAAJEZwkn6FSb3sDeAHSDhc5CY5d5rEQJ7M4DHk9tVQ2d2+//q35WvTDxtSsbRKiV211GobM8kZdeRApEsRtiVVnsErFHHWYgtnRifEMxnODfj+RcMu2NC/3GDo588sQa3H7W888Yit7GA3/NwkEqCVJHU4t/rgOQUZGasHhwQ3/+5Xk8328+uff1kURwNEuEIpHFjgdSKBvmJ3C2wgiUNCQYaJ3Na//WhZkdpIrHOXaSIzXOQWIp4FIOpFNCj3EFBUy4jEYEJLhufZnQfURtKijrrRZYix4GmB4zWaQliScnYvNjUvmewcwlx0GUva0e1d8AnL/AvTwlrtC+KCEPU3qXWDI0twQWL0QOxuQRDvcMS5mVpVtARJlWHnh4oO5I4r6JHtaWPyrNqtU4V0JWqjiser+cAl9lbeUKq2LiEgZpHSWUI1QxS3pcFAPWQWhyGZAlKKKCpRNctDnf3Z12WWpOR7NlzGpDX/x28/HPPIBHS7skwZmxnOxSd0lrrW6vti6TC+Lzn++ncfFfTIzmYoFR68Q40GX3ZGbMOAcGSCO5QYnRRMis6dE5dsAvFbCDwbfzD9wni1gGZnf3Z8aViKaJlUe8IZgWoBIsnOJl4ttzLF2z2Ormdi6nQqfyD/q4aYYIGEJRwlxcqif4gnkwlHzAnZcBn6Y7gUXY899veUo59ElwXllfKNe6T4t7WZ2MTMts77KpLJAKZ+HK2p3TSs//2jSp0gY+/QoMNXjqSivv3BgwkcRL8F36lwcuWO2BYhaVc8SB4H1R6ykASMKC5era8mZ09J6z+TIK9pqiF/tBN4ctrT5y8cY5igY7GUzdRGk5Tf43vWKuRk9p0vi/yuFJpu1Mqcg1QedPjKkQjO02pAXlOp/XV8thuxC4jjYP3bX80ZUqtefBmI+FlICDIwNNDNmRNw2R8VYiZAjTfjlUAOg0lQylWxZ/X8hWMMFwJ1tBRdpprY4kTak167HZ9tdHJu4YiQQN+AMN2O+2Iy1CO7k4NMtBf0raL6HrPkCKCODrW/RLJq9qCOflzheu1/RoKkIMTG9orCzDEmGAs8cvLQI1LktfR4BhPOLD/3RUK8QRipNYa64mks9xOKka6ly//C/Wx9X7T/upvtyHHu69rBS9nu3HvFIPfdgHS6jPu7WegNJanAEX7x9rHl/RKycZzOHspAm5g1truUusEu1gkKqoEgOS4qKndrKw4DfSWMSsqrKwVXmCcyvKNKuC/vws52L8TGHt91vo5S/btHXT+Pvo1K8aKASYHVoXwr240fWGtUxgwMOUJi+/iYic3CwuIAfUtwfq2whN0LJkWntWE6qJSbgWGFiN6KlvVI9f6gRW8LC4vO6Ivgrr73MMcvc+IR0u1SdBKutZYYTB0soCIilqy0ZmExXOhPgiO8DQmjXYpOoJoOJse1F7CExransnh/UDklnXqzZSU1C4vhRV8EhzCIrIXWZWyOSTV15T+WyCqKVWUtKWIoy9Bl91PFcaD8n//+58EYmy0sLAaCno1oE7nVsR1V/SckjHbOBQsLC4t+0HMc3A8X9jMwALCKOrB0DQsLi/OJngnOIW8g5Ve+H6Ly4xYWFmcDx97ZvgVcsEgU16cf5NuuEGsy0wuk18GoszsjfRvMAqTtPe9iKZ69IAVQ0dFz5NH9M9hN/sQgHc+0hlvsua+gR5u9Zv1cz61kQTU2aY6jqi8V+8lGMQ23U9UJOT/53u85HgViRquqNzkZ48NCcBYJg0C1z/aINZnpFn5J+qp0Gj8w4BLCKFbdq7mH9xqITOnbpvilYkdN0E1+2GBCnhjPvzkdBGyaOWmYMfeeSBJwlnkyW3z66NNCt/vQSrZv04AIpCu9JwH1PRHc27kHE56qbvD5ZQ7Ghn+O13IPl58V7x5LfnIVqmMy/vm4az2rqB46iYdFENBA1N7zDh5bZY+cbLN/mnTPg+2g3wYVPaLss0d3cFenf4ygZ4XtUOGGVP0N1zdNnlHP+82ehxMIOIeEg8mpThh8//N+pzoqmvuuYVwKG/DLvBC9792CkPKtxkcv1Z/NueVWMp5CqeYMMjbk/GR8aK39HGaF80xyx36fe5bgfrR/wd1RyfaZlL6YItraBO1kwZxTebHx28SCj0k6hxG6zzbuToXLgme2xgO8xDPmS60c6S5Wkt8CteTUFRcYVhD4vWq1psXgvldYAjUl37Xj9FwVd59GSi83fpNI6BMplOc+xhPn5IuIPT2wrc9em1rJCMnxe754nO95zwQXdAqXk040Fi4N/xpYXXaLoyMobDrG2mhTVU7I7CdTX2SjyfJiK2IpcgGkBeDGJw09OX1pBGbAJGKDS55auwQjmzsOqzj8+Xnxd+vRfezRhfwF7d0Um150m3C9+LmyNCENh7MoZeWbrFs/N6IJKa1gekmAJHLre/JSSikwqZbT7BjNruvae5/xC065XS89lVbVedM2k4/77JuDnhXGdkYkEqMcU17yski3vdqnHDjoQ4ukbhnq0/pkhQMpvkCtnYVS/qwGzpU4uRmbndwvZJtdh+cqkHGjkW53ew/7KpfEInHi9gqtUrfgnEAeKpwy+ANIasJRrlVlYJEWGwa4ZkM22+BINTaGNnYkgNWAXEpSxAWVXnuj9uZ8m13EAB7sYxT2Z9kuJNvIOZRlmWwTL6EudiBS9EQBzfNLVYnun6WIeuFO8vByvXiMVCyWz7IeOqaUjCY1duhc2lyX6UXBy0ZUdcmXdEF6Tbj1axb1XsNjlO2kIgiQNEDOaz7Xt/icoQugJkOmhCmT1fNTc+00byrwbPzXwJo6dwVC89zZsTTT7GcZP3FtQsbRqKo+MWYP7ReoEJKTZ3V1auVJfB8yCcm46eUe9uVkUFpvUSLdHKIgGahDa6tJAkJsI7B3OwVvJObvNIbFLDIZLPFs+5gHckGB3urZgyeSG5gGJmvPH92tF1v0DdT0uFXsOZPFDM/aN8Pj+V3c6ElQLn85XM9DU6NwTOxA0fJN16Y/W2IxYj7sDBZIXptBF7BMvDtY3yCY2KWL41FJ5aCsv9jOLtZbF5qJgu1W7Gnc4LFxs5PqJl5vue9MAAUm65faVM312yHCCYPJ9z5zQs6Q0/RKVkraP/1rYwe2OIJq4BkpqBp1TvE1Lsg1SiPv54/8qt7i+ZXybJql5u+Ld+r2Y3/cqCcsqsk4mIofoy+Ca9XP8iiQWVTYv5Voepoh6s6+58wo2Mmgxnv/KH7qwnGAnw+bE142/Y2kMKWvXoknsZWhnQ3F4wef74rHrkKoFhD1mlHtplZcJrxSt6oWbzNnqsZsNHbA4ntSvjr9+TI7LApNtyMqsBfODb/LsZi01ngWnx+f/sOV0CguRCWz+YuYqoSKNlmCmifnAtuxBmcKIdKHeq9q8/JRRfGzj/5mruG9z5icaXkUfhANpqMUplIsXGiWYhENuR2FmEdgv8Tj49BykY6iHcq6GUNyLUxCkwFpmZL20pVNxgZ4TvGQmu+Tfj4obd+gEfK6i3zMsIfqYrD/Em8z/n3xEze6rowbXpclOUxOghPwAF9nVTULSUJ5yzyTbZ4VZ0Noq/E8yDIBzB+Xm7wOJhLC5i+zitjKkGV8XtmFLvD00adr/GeN7W23eAzklG/nyvPsne8yFGCCvXdNTRztNAONh2MlpUCDyHsO7WX4T91YHqrJIjFfuPBGJpUMeZSVxgT12L0BoaZGD6UxmtJigbp6SL1H2pa2iYSOvKBtCS5Qc0VSkffDlQlMyDy83nDf3UrVfmesph2t3NiKbrPt48VJo0VRTSMiUhLOkuPPOZ4IC9HextqhCZT+DEilZiYPjegiUS7qfIxel9kmVcsQ8YRFlIEWsbR9E5wMdD7pOUiwXaBIcaNYlaawyagLJwBf7ZCZieZ4MIodx/WYBF4U7yTmzewBbje9QkN1DXpAYE8x1xSoi0viJWO1ohKqFXEEs7bYcN0Wu221vGvUjdZi5IdqBryAMXvOuk4SKI4OJnY4LAnp+qdMuz0Yp4cnThHpV4Lm/TC2RlQbIjnJy8+Tw4bY/qDL92cfRua7CQfpVUoMiGgNfO+6jI0cTy5sm4THdVWcxCMs/IZrzSY1DJrlst31MgTxeAeOKWO7Zbup0JdxrlRaPeAjBfoyI98jbOy4dGTwrCTVgk9TE98wsl8M8Adl3FnZYnvBPowunvXwl2BAT/mqTGtbahrSlR2oikTTVIryLjhjyjtaCFJgtDbqG79YBa1TLtvl3FG1Py5Gfjgp8Pl44BRa/dypLHpNO6z6kbTYm/o+MHGEHc+YIzfM5zbS8UkhGBvLbH64zBJ/IVTFJcNBDKsSJ+npCy3t0WEYS2C7XeUJwSXCZd6+vIepMmnntTzzVtsfieCMLW7a2BDmIUGIynN1+uGY2CyGtXGwLym8yUk/UKCdiYYCoL7Ulj8hqW0gkLQryUxgVXu9ZYoXGuki22offojRQ1Yrm6/jeN4EQf8wJgENGWPXidn4+LfxXvYlAe0KmpMtq5OXgXo6U1EnMy8e9R+TGE4KUS+1//49vMcv+5KQnJFh9PFnjEhq1Bv2HgvpPPumeT8VBbVXFAnaYKp+hXJVrCJ3E6sptlsxSezRxUPOmGZ2xIPjHhEX9ajM1i4kDL74XOCtm4EhgZCaxDuJ521U7bw06VBGYjsgN5Hadil9s58GLMMM9phWApf8XLPfjWou94LaG/AJHPF4ZthZUYhvT0dsIB5m2ciLFv9Na5hpfU6HJUoJaDf7ijVWMiE+1NuEzuNkTTZtlm0gE4doLB1Dh4IwjPg+xPEjhI6iArcpGjtIyMSFRnvRhVYhREYQANPExlQNuuRdLIVd2Jqtz46vjdi7P8acUImTW3C8DLTAkXNRg+bAk2IPAEi4jDnPeuKtY0LJI9YWO7mdk0aYOOxpvO0HjVYnDnrgxnR+frEd0veeDVdVlEyrpHs24lZ6yb8MPedMHuaFlDAAVv3MYHM8lTOxX2CM+G0zFy7pkfs7qpqX9CIexDfkxeVZfIxndF6GRTxCWXo/y6bGLw3MX3//99tQS7mynNU2eYnyTTciKTkv3ubPlgj1Vlg0wEibQaSAXC+/mZuKHRSaqnMsvEkx1K4RXrNWjry083Shtu3sqwo5eBvIK0il6DRU5d1pacpwtLfuKWQbVGo1DNExP/j23pwRCUwkwsNct4UNRrCW4/HRtCtXH8n2DSFE4TUaZ4PRcsIQD98LGkjzi3wflyQ+EZ3aonleKRM2IhkzPKZ0/V2SSUI87DIxeg4Uzb7NutJhjwZjgwshauTbuQeTnumAnnyvBhNUSamshCSwIXtZK2/r+6+TJxLfQaCzbCu5ERIa30AeQ9Tu3FwJYRjKYp0o6lrzpHv0PWM9qTMXKT31BlkVCcIAQvE/uDuVeDxTM4QTogkn8NXZHIqhWCt+aWlTvLHQJ2Tf/jjEDT6/x3X9hFACQmeNDSeGMH4LTGAwzo/iD/zZd7hIfJm8sIZ0CYWAQew/jvK2OxYzaHLNEvPG42sN+UUxhnXfferyxDjVKXRIwiECm9tqGKJTB6GZXD2lNviaV3m9clemHaJlaqHEpXBHHCJdayEiSTJhifg8J+dXv0bZP/maDZPbvfg2TIaXJeaNn1cW6p07MVy/bss1kwRWxSS0oNjZEnb55PezgEz8rc4rUd+SH3SHgyG5OIRYFPHsq1iq2N8WaWJ//5LbbtYxEhnPlN4FPeZ4YpB1LpsIdDYj8NDN9HbexC80Lu9B+v4wOhEkNqzTOr0mVIcw6iSyF0x5GbGhsPrnNlPJ5X6LF0wMwd3co7c++GKCnQziJCiEnth2+2j1W3h+YaYBS2Um9EjuSatzkbAXlkoz4brNfjO5m3zPmh03XNbpnob7ks+t7lsnRPcRnlO7+xFHuF67Y3T7zDqdn6DZPY2fzyju3oo/r1b7dtT+hIy76HOV36L3PnzWiTvPfbfwSfcuNSJr/AZlIBEMN7GdBrQK6A49ZbZ8vUVSGEh0kD+DwkaSMXInD0tsSaBOYkBFcmhRTA2hrZOJbUPsUdGAUAuLo2Cg4Y9hThmcalhiSxotxwWbHQJ71DA5aixOMQYe3z0cKmsfkHAHpYu73qV1S2zJI3ToaFBX2ChdYU91uUYXt+29tkgSx5bAIuEKEhoAQ010VOEXbo1IF89aHJuFxXnEsRFcCEN0pOaGxz5HFROLpWitk7fHwsLidOHYCS6EVEFApeYkyBKOXapju5oElRIWd2l0y5KahcXZxIkRXBQmbga9rEmLSbDGXASuqQCKurxHo8V+478sLCxOF4aC4OIQ6U6hc4WQJADXT2RHkfIkZ7BpMK5r/vfrn7nmO5JLHm3vQ/vgXwsLi7OL/wefOamsh4uMoAAAAABJRU5ErkJggg=="
+      />
+    </svg>
+
+    <h2 class="subtitle-welcome-to">Welcome to Egypt Trust SST</h2>
+    <div class="line"></div>
+
+    <div class="col1">
+      <div class="row-a row-top">
+        <p class="row-text-a">Branch:</p>
+        <p class="row-text-a">Head Office New Cairo</p>
+      </div>
+
+      <div class="row-b row-bottom">
+        <p class="row-text-b">Service:</p>
+        <p class="row-text-b">Digital Signature</p>
+      </div>
+    </div>
+
+    <div class="line line2"></div>
+
+    <div class="col2">
+      <div class="row-a row1">
+        <p class="row-text-a">Request Id:</p>
+        <p class="row-text-a">{{requestId}}</p>
+      </div>
+
+      <div class="row-b row2">
+        <p class="row-text-b">Payment Reference:</p>
+        <p class="row-text-b">{{paymentReference}}</p>
+      </div>
+
+      <div class="row-b row3">
+        <p class="row-text-b">ECR Ref No:</p>
+        <p class="row-text-b">{{ecrRefNo}}</p>
+      </div>
+
+      <div class="row-b row4">
+        <p class="row-text-b">Response Code:</p>
+        <p class="row-text-b">{{rspCode}}</p>
+      </div>
+
+      <div class="row-a row6">
+        <p class="row-text-a">RRN:</p>
+        <p class="row-text-a">{{trxRrn}}</p>
+      </div>
+
+      <div class="row-b row7">
+        <p class="row-text-b">TRANS DATE/TIME:</p>
+        <p class="row-text-b">{{trxDatetime}}</p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="col-bottom">
+      <div class="row-a row9">
+        <p class="row-text-a">TID:</p>
+        <p class="row-text-a">{{terminalId}}</p>
+      </div>
+
+      <div class="row-a row10">
+        <p class="row-text-a">MID:</p>
+        <p class="row-text-a">{{merchantId}}</p>
+      </div>
+
+      <div class="row-a row11">
+        <p class="row-text-a">BATCH ID:</p>
+        <p class="row-text-a">{{batch}}</p>
+      </div>
+
+      <p class="text-approved-online text1">APPROVED</p>
+      <p class="text-507803xxxxxxxxxx">{{cardNumber}}</p>
+
+      <div class="row-a row14">
+        <p class="row-text-a">AMOUNT:</p>
+        <p class="row-text-a">{{transactionAmount}}</p>
+      </div>
+
+      <div class="row-a row15">
+        <p class="row-text-a">AUTH CODE:</p>
+        <p class="row-text-a">{{authCode}}</p>
+      </div>
+
+      <p class="text-sst-gig-hq text1">SST-EGYPT-TRUST</p>
+
+      <p class="text-entered-online">(Entered online pin)</p>
+      <p class="text-i-authorize text2">
+        I authorize to debit the above from my account, I confirm receipt of
+        merchandise inside the shop. And in a good conditions, All sales are
+        final.
+      </p>
+      <p class="text-merchant text1">*****CUSTOMER COPY*****</p>
+      <p class="text-symbol">
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        - - - - - - - -
+      </p>
+      <p class="text-please-keep">Please keep this receipt as a reference.</p>
+      <p class="text-thank-you text2">
+        Thank you for using our Digital Store<br />
+        for assistance, call
+      </p>
+      <svg class="graphic-bottom" viewBox="0 0 380 36" fill="none">
+        <!-- 1 -->
+        <path
+          d="M131.034 21.072H136.458V4.992L131.274 5.472V1.2L141.21 0V21.072H146.538V24.864H131.034V21.072Z"
+          fill="black"
+        />
+
+        <!-- 9 -->
+        <path
+          d="M152.42 31.2C155.557 30.88 158.229 30.064 160.437 28.752C162.677 27.44 164.405 25.84 165.621 23.952C166.869 22.064 167.684 20.032 168.069 17.856L167.924 17.808C167.22 18.832 166.245 19.648 164.997 20.256C163.781 20.864 162.276 21.168 160.484 21.168C157.572 21.168 155.22 20.288 153.428 18.528C151.668 16.736 150.788 14.24 150.788 11.04C150.788 8.992 151.269 7.136 152.229 5.472C153.189 3.808 154.516 2.512 156.212 1.584C157.908 0.623999 159.845 0.143998 162.021 0.143998C164.229 0.143998 166.165 0.655999 167.829 1.68C169.493 2.704 170.788 4.192 171.716 6.144C172.644 8.064 173.109 10.368 173.109 13.056C173.109 16.832 172.309 20.336 170.708 23.568C169.108 26.768 166.741 29.424 163.604 31.536C160.501 33.648 156.773 34.944 152.42 35.424V31.2ZM162.021 17.52C164.357 17.52 166.373 17.2 168.069 16.56C168.229 15.44 168.309 14.096 168.309 12.528C168.309 10.128 167.733 8.176 166.581 6.672C165.429 5.136 163.813 4.368 161.733 4.368C159.845 4.368 158.324 4.96 157.172 6.144C156.052 7.328 155.493 8.928 155.493 10.944C155.493 12.992 156.1 14.608 157.316 15.792C158.564 16.944 160.133 17.52 162.021 17.52Z"
+          fill="black"
+        />
+
+        <!-- 8 -->
+        <path
+          d="M187.4 35.424C183.736 35.424 180.856 34.56 178.76 32.832C176.664 31.104 175.616 28.768 175.616 25.824C175.616 23.712 176.192 21.92 177.344 20.448C178.496 18.944 180.064 17.792 182.048 16.992C180.416 16.192 179.136 15.168 178.208 13.92C177.312 12.64 176.864 11.104 176.864 9.312C176.864 6.464 177.84 4.224 179.792 2.592C181.744 0.96 184.304 0.143998 187.472 0.143998C190.672 0.143998 193.248 0.96 195.2 2.592C197.152 4.224 198.128 6.464 198.128 9.312C198.128 11.104 197.664 12.656 196.736 13.968C195.84 15.248 194.56 16.272 192.896 17.04C194.912 17.84 196.496 18.992 197.648 20.496C198.8 21.968 199.376 23.744 199.376 25.824C199.376 28.768 198.32 31.104 196.208 32.832C194.128 34.56 191.192 35.424 187.4 35.424ZM187.472 15.264C189.232 15.264 190.64 14.784 191.696 13.824C192.752 12.864 193.28 11.552 193.28 9.888C193.28 8.224 192.768 6.912 191.744 5.952C190.72 4.992 189.296 4.512 187.472 4.512C185.68 4.512 184.272 4.992 183.248 5.952C182.224 6.912 181.712 8.224 181.712 9.888C181.712 11.552 182.224 12.864 183.248 13.824C184.304 14.784 185.712 15.264 187.472 15.264ZM187.472 31.056C189.616 31.056 191.296 30.544 192.512 29.52C193.728 28.464 194.336 27.056 194.336 25.296C194.336 23.504 193.712 22.096 192.464 21.072C191.248 20.016 189.584 19.488 187.472 19.488C185.392 19.488 183.728 20.016 182.48 21.072C181.264 22.096 180.656 23.504 180.656 25.296C180.656 27.056 181.264 28.464 182.48 29.52C183.696 30.544 185.36 31.056 187.472 31.056Z"
+          fill="black"
+        />
+
+        <!-- 7 -->
+        <path
+          d="M218.086 5.28H201.622V0.767999H223.27V4.32L207.958 34.272H202.822L218.086 5.28Z"
+          fill="black"
+        />
+
+        <!-- 7 -->
+        <path
+          d="M243.133 5.28H226.669V0.767999H248.317V4.32L233.005 34.272H227.869L243.133 5.28Z"
+          fill="black"
+        />
+      </svg>
+    </div>
+  </body>
+</html>
