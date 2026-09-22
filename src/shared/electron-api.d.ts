@@ -40,7 +40,9 @@ declare global {
   }
 
   interface ElectronSettings {
-    id_card_rotation_angle: string;
+    document_cam_rotation_angle: string;
+    document_camera_index: number;
+    face_camera_index: number;
     invert_face_cam: boolean;
     receipt_printer_name: string | undefined
   }
