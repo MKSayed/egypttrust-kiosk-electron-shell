@@ -44,7 +44,9 @@ declare global {
     document_camera_index: number;
     face_camera_index: number;
     invert_face_cam: boolean;
-    receipt_printer_name: string | undefined
+    receipt_printer_name: string | undefined;
+    idle_timeout_ms: string;
+    prompt_timeout_ms: string;
   }
 
   interface ReceiptData {
