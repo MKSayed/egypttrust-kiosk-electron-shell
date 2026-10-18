@@ -41,12 +41,13 @@ declare global {
 
   interface ElectronSettings {
     document_cam_rotation_angle: string;
-    document_camera_index: number;
-    face_camera_index: number;
+    pos_index: string
+    document_camera_index: string;
+    face_camera_index: string;
     invert_face_cam: boolean;
-    receipt_printer_name: string | undefined;
-    idle_timeout_ms: string;
-    prompt_timeout_ms: string;
+    receipt_printer_name: string | undefined
+    idle_timeout_ms: string
+    prompt_timeout_ms: string
   }
 
   interface ReceiptData {
